@@ -1,13 +1,7 @@
 require "DockingStation"
 
-describe "Docking Station" do
-    
-    it "tries to load the file" do
-      expect(DockingStation.new.class).to eq(DockingStation)
+describe DockingStation do
+    describe "Docking Station" do
+        it {is_expected.to respond_to(:release_bike)}
     end
-
-    it "responds to the method release_bike" do
-        expect(DockingStation.new).to respond_to(release_bike)
-    end
-    
 end
